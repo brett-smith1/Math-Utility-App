@@ -394,7 +394,7 @@ namespace Math_Utility_App
             }
 
         VolumeInput:
-            Console.Write("\n Please Enter the weight: ");
+            Console.Write("\n Please Enter the volume: ");
             try
             {
                 volume = Convert.ToDouble(Console.ReadLine());
@@ -405,7 +405,7 @@ namespace Math_Utility_App
                 goto VolumeInput;
             }
 
-            Console.WriteLine(" Please choose the weight unit you are converting to \t");
+            Console.WriteLine(" Please choose the volume unit you are converting to \t");
             i = 1;
             foreach (var item in volumes)
             {
