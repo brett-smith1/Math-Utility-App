@@ -4,65 +4,6 @@ namespace Math_Utility_App
 {
     class FlashCards
     {
-        public static void Menu(string userName)
-        {
-            bool flag = true;
-
-            while (flag)  //Allows user to continue with Flash Cards until they choose to return to Main Menu
-            {
-                Console.Clear();
-                Console.WriteLine("\n\t\t Flash Cards\n==================================================");
-                Console.WriteLine($"\n Welcome to Flash Cards {userName}.\n" +
-                                  " Here you will test your basic arithmetic skills.\n");
-                Console.WriteLine(" Choose from one of the following options: \n\t" +
-                                  " 1.) Addition\n\t" +
-                                  " 2.) Subtraction\n\t" +
-                                  " 3.) Multiplication\n\t" +
-                                  " 4.) Division\n\t" +
-                                  "Or press \"q\" to return to the Main Menu");
-                Console.Write(" Enter the number for your selection: ");
-
-                switch (Console.ReadLine())
-                {
-                    case "1":
-                        {
-                            Console.Clear();
-                            FlashCards.Addition();
-                            continue;
-                        }
-                    case "2":
-                        {
-                            Console.Clear();
-                            FlashCards.Subtraction();
-                            continue;
-                        }
-                    case "3":
-                        {
-                            Console.Clear();
-                            FlashCards.Multiplication();
-                            continue;
-                        }
-                    case "4":
-                        {
-                            Console.Clear();
-                            FlashCards.Division(); ;
-                            continue;
-                        }
-                    case "q":
-                        {
-                            Console.Clear();
-                            flag = false;  //Will break the while loop.  User will be returned to Main Menu
-                            break;
-                        }
-                    default:
-                        {
-                            Console.WriteLine("Invalid input. Please try again.");
-                            break;
-                        }
-                }
-            }
-        }
-
         public static void Addition()
         {
             int upperLimit = 100;  //sets upper limit of random number

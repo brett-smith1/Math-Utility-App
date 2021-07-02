@@ -4,35 +4,9 @@ namespace Math_Utility_App
 {
     class BasicCalculator
     {
-        public static void Menu(string userName)
-        {
-
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine("\n\t\t Basic Calulator \n==================================================");
-                Console.WriteLine($"\n Welcome to the Basic Calculator {userName}." +
-                                  "\n Here you can calculate a mathematic expression between two numbers." +
-                                  "\n For example: (1 + 5) or (2 * 6);\n\n");
-                Console.WriteLine(" Press \"q\" to quit and return to the Main Menu\n" +
-                                  " Press any any other key to continue.");
-                
-                //Breaks while loop and returns to MainMenu (calling function)
-                if (Console.ReadLine() == "q")
-                {
-                    break;
-                }
-                else
-                {
-                    Console.Clear();
-                    Calculator();
-                    break;
-                }
-            }
-        }
 
         //Method to execute calculations
-        public static void Calculator()
+        public static void Calculate()
         {
             double num1;
             string op;

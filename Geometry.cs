@@ -6,28 +6,6 @@ namespace Math_Utility_App
     class Geometry
     {
 
-        /*Geometry Menu welcomes user to section, provides a brief description,
-          and gives option to return to Main Menu*/
-        public static void Menu(string userName)
-        {
-            Console.Clear();
-            Console.WriteLine("\n\t\tGeometry Calculator\n==================================================");
-            Console.WriteLine($"\n Welcome to the Geometry Calculator {userName}.\n" +
-                                " Here you can find the perimeter and area of a basic geometric shape.\n" +
-                                " You must provide the type and dimensions of the shape.\n");
-            Console.WriteLine(" Press \"Esc\" return to the Main Menu\n" +
-                                " Press any any other key to continue.");
-
-            if (Console.ReadKey().Key == ConsoleKey.Escape) //Reads key input, if ESC, 
-            { }
-            else
-            {
-                Console.Clear();
-                CreateShape();
-            }
- 
-        }
-
         //Create Shape Object
         public static void CreateShape()
         {
@@ -49,40 +27,28 @@ namespace Math_Utility_App
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        {
                             Console.Clear();
                             Rectangle.Create();
                             break;
-                        }
                     case "2":
-                        {
                             Console.Clear();
                             Square.Create();
                             break;
-                        }
                     case "3":
-                        {
                             Console.Clear();
                             Circle.Create();
                             break;
-                        }
                     case "4":
-                        {
                             Console.Clear();
                             Triangle.Create();
                             break;
-                        }
                     case "q":
-                        {
                             flag = false; // this will cause the While loop to end
                             break;
-                        }
                     default:
-                        {
                             Console.WriteLine("Invalid Input. Please try again.");
                             Console.ReadKey();
                             continue;
-                        }
                 }
             }
         }
@@ -167,7 +133,7 @@ namespace Math_Utility_App
             }
         }
 
-        public class Square: Geometry
+        public class Square : Geometry
         {
             //Fields
             public double Side;
@@ -210,7 +176,7 @@ namespace Math_Utility_App
 
         }
 
-        public class Circle: Geometry
+        public class Circle : Geometry
         {
             public double Radius;
             private readonly double Circumference, Area;
@@ -251,7 +217,7 @@ namespace Math_Utility_App
             }
         }
 
-        public class Triangle: Geometry
+        public class Triangle : Geometry
         {
             public double Height, _Base;
             private readonly double Perimeter, Area;
